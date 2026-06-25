@@ -1,7 +1,15 @@
 import { Metadata } from "next";
+import { ArrowUpRight } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import SectionHeader from "@/components/ui/SectionHeader";
 import CTASection from "@/components/sections/CTASection";
+
+// External links per case (by index). Undefined = no public site.
+const urls: (string | undefined)[] = [
+  "https://onroadnetworks.com/",
+  undefined,
+  undefined,
+];
 
 const colors = [
   {
@@ -72,6 +80,7 @@ export default async function CaseStudiesPage({
           {cases.map((c, i) => {
             const number = String(i + 1).padStart(2, "0");
             const color = colors[i];
+            const url = urls[i];
             return (
               <div
                 key={c.title}
@@ -92,6 +101,17 @@ export default async function CaseStudiesPage({
                       {c.title}
                     </h2>
                     <p className="text-slate-400 leading-relaxed max-w-2xl">{c.overview}</p>
+                    {url && (
+                      <a
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-5 inline-flex items-center gap-1.5 text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors"
+                      >
+                        {t("visitSite")}
+                        <ArrowUpRight size={16} />
+                      </a>
+                    )}
                   </div>
                 </div>
 

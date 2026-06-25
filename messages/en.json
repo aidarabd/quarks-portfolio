@@ -82,16 +82,16 @@
   },
   "HomeCases": {
     "tag": "Case Studies",
-    "title": "Government Systems We've Delivered",
+    "title": "Systems We've Delivered",
     "description": "Real results from complex, high-stakes projects — every platform we build is designed to work at scale and under pressure.",
     "viewAll": "View all cases",
     "items": [
       {
-        "tag": "Government",
-        "title": "Citizen Registration System",
-        "problem": "Manual document processing causing delays and errors across registration offices.",
-        "result": "70% reduction in processing time",
-        "tech": ["ASP.NET Core", "React", "PostgreSQL"]
+        "tag": "Logistics",
+        "title": "ONROAD ELD — Fleet Management Platform",
+        "problem": "Trucking fleets managing compliance, tracking, and drivers across disconnected tools and error-prone paper logbooks.",
+        "result": "FMCSA-compliant logging with real-time fleet visibility",
+        "tech": ["React", "Mobile App", "GPS & Telematics"]
       },
       {
         "tag": "Government",
@@ -241,7 +241,7 @@
   },
   "CaseStudiesPage": {
     "metaTitle": "Case Studies",
-    "metaDescription": "See how Quarks Code has delivered national-scale government software systems with measurable results — from citizen registration to passport issuance platforms.",
+    "metaDescription": "See how Quarks Code delivers fleet management, identity, and government platforms with measurable results — from ELD logistics systems to passport issuance.",
     "tag": "Case Studies",
     "title": "Real Systems. Real Results.",
     "description": "Every project we take on is high-stakes. Here is how we've solved them — and the measurable outcomes we delivered.",
@@ -249,18 +249,19 @@
     "solutionLabel": "The Solution",
     "resultsLabel": "Results",
     "techLabel": "Technologies",
+    "visitSite": "Visit site",
     "items": [
       {
-        "tag": "Government · Digital Transformation",
-        "title": "Citizen Registration System",
-        "overview": "A national-level platform built to digitize and centralize the citizen registration process — eliminating paper-based workflows and the inefficiencies that came with them.",
-        "problem": "Registration offices relied entirely on manual, paper-based processes. Documents were processed by hand, data was entered multiple times across different systems, and citizens often had to visit offices repeatedly to complete registration. Staff spent the majority of their time on low-value administrative tasks rather than serving citizens.",
-        "solution": "We developed a centralized web platform that digitizes the entire registration workflow — from document intake to final approval. The platform provides a unified back-office interface for staff, automated document routing between departments, and a structured data model that eliminates redundant entry.",
-        "tech": ["ASP.NET Core", "React", "PostgreSQL"],
+        "tag": "Logistics · Fleet Management",
+        "title": "ONROAD ELD — Fleet Management Platform",
+        "overview": "An all-in-one fleet management and electronic logging (ELD) platform for trucking and logistics operators in the US — combining FMCSA-compliant hours-of-service logging, GPS tracking, and a driver-first mobile app in a single system.",
+        "problem": "Trucking fleets juggled compliance, tracking, and driver coordination across disconnected tools and paper logbooks. Manual hours-of-service records were error-prone and risked FMCSA violations, managers had no real-time visibility into vehicle locations or status, and drivers lacked a single place to see schedules and stay compliant on the road.",
+        "solution": "We built an integrated platform pairing a driver-focused mobile app with a fleet-management back office. The system automates hours-of-service logging to FMCSA standards, provides real-time and historical GPS tracking with vehicle telematics, optimizes routes, and restores offline driving history once connectivity resumes — giving drivers and managers one connected workflow.",
+        "tech": ["React", "Mobile App", "GPS & Telematics", "ELD / FMCSA Compliance"],
         "results": [
-          { "metric": "70%", "label": "Reduction in processing time" },
-          { "metric": "↓↓", "label": "Data entry errors eliminated" },
-          { "metric": "↑", "label": "Staff throughput and capacity" }
+          { "metric": "FMCSA", "label": "Compliant hours-of-service logging" },
+          { "metric": "Real-time", "label": "GPS fleet tracking and telematics" },
+          { "metric": "Eliminated", "label": "Manual paper logbooks" }
         ]
       },
       {
