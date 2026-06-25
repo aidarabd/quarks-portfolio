@@ -1,0 +1,394 @@
+{
+  "Layout": {
+    "metaTitleDefault": "Quarks Code — Custom Software for Businesses & Government",
+    "metaTitleTemplate": "%s | Quarks Code",
+    "metaDescription": "Quarks Code develops custom software solutions that automate processes, integrate systems, and build digital platforms for businesses and government agencies. Based in Bishkek, Kyrgyzstan.",
+    "ogTitle": "Quarks Code — Custom Software for Businesses & Government",
+    "ogDescription": "Custom software solutions that automate processes and build digital platforms for businesses and government agencies."
+  },
+  "Nav": {
+    "home": "Home",
+    "services": "Services",
+    "caseStudies": "Case Studies",
+    "about": "About",
+    "contact": "Contact",
+    "startProject": "Start a Project",
+    "language": "Language"
+  },
+  "Footer": {
+    "tagline": "Custom software solutions for businesses and government agencies. We automate processes and build platforms that create measurable value.",
+    "companyHeading": "Company",
+    "contactHeading": "Contact",
+    "services": "Services",
+    "caseStudies": "Case Studies",
+    "about": "About Us",
+    "contact": "Contact",
+    "address": "Asanbai 40, Bishkek",
+    "rights": "© {year} Quarks Code. All rights reserved.",
+    "bottomTag": "Enterprise software · Government systems · Process automation"
+  },
+  "Hero": {
+    "badge": "Custom Software for Businesses & Government",
+    "headline": "We Build Software <accent>That Transforms</accent> How Organizations Work",
+    "description": "From manual processes to intelligent digital systems — we deliver custom software that automates operations, integrates systems, and creates measurable efficiency for businesses and government agencies.",
+    "viewWork": "View Our Work",
+    "startProject": "Start a Project",
+    "scroll": "Scroll",
+    "stats": [
+      { "value": "70–80%", "label": "Avg. process time reduction" },
+      { "value": "8+", "label": "Years of enterprise experience" },
+      { "value": "3+", "label": "Government systems delivered" }
+    ]
+  },
+  "Stats": {
+    "items": [
+      { "value": "70%+", "label": "Average reduction in manual processing time" },
+      { "value": "8+", "label": "Years of enterprise software experience" },
+      { "value": "3", "label": "National-scale government systems delivered" },
+      { "value": "1000s", "label": "Citizens served daily by our platforms" }
+    ]
+  },
+  "HomeServices": {
+    "tag": "What We Do",
+    "title": "Software Solutions That Drive Real Results",
+    "description": "We focus on the intersection of engineering excellence and business impact — building systems that work reliably, scale smoothly, and deliver measurable value.",
+    "exploreAll": "Explore all services →",
+    "items": [
+      {
+        "title": "Process Automation",
+        "description": "Eliminate manual, repetitive work. We map your existing workflows and replace them with automated systems that run faster, reduce errors, and free your team for high-value tasks."
+      },
+      {
+        "title": "Custom Web Applications",
+        "description": "Enterprise-grade web platforms built for scale — from citizen-facing portals to internal management systems that your organization can depend on."
+      },
+      {
+        "title": "System Integration",
+        "description": "Connect your tools, databases, and third-party services into one cohesive ecosystem. We bridge legacy systems with modern infrastructure so data flows without friction."
+      },
+      {
+        "title": "Government Digital Solutions",
+        "description": "Secure, compliant platforms purpose-built for the public sector. We understand what high-stakes government software demands — from biometric integrations to audit trails."
+      },
+      {
+        "title": "Internal Enterprise Tools",
+        "description": "Stop working around off-the-shelf limitations. We build dashboards, workflows, reporting, and management tools precisely fitted to how your organization actually operates."
+      },
+      {
+        "title": "Data & Reporting",
+        "description": "Turn operational data into actionable intelligence. Real-time dashboards, automated reports, and analytics layers that give leadership visibility into what matters."
+      }
+    ]
+  },
+  "HomeCases": {
+    "tag": "Case Studies",
+    "title": "Government Systems We've Delivered",
+    "description": "Real results from complex, high-stakes projects — every platform we build is designed to work at scale and under pressure.",
+    "viewAll": "View all cases",
+    "items": [
+      {
+        "tag": "Government",
+        "title": "Citizen Registration System",
+        "problem": "Manual document processing causing delays and errors across registration offices.",
+        "result": "70% reduction in processing time",
+        "tech": ["ASP.NET Core", "React", "PostgreSQL"]
+      },
+      {
+        "tag": "Government",
+        "title": "Passport Application & Issuance System",
+        "problem": "Disconnected workflow between biometric equipment, identity verification, and back-office staff.",
+        "result": "80% reduction in processing time",
+        "tech": ["ASP.NET Core", "React", "PostgreSQL", "Biometric Integration"]
+      },
+      {
+        "tag": "Government",
+        "title": "Land Allocation Application System",
+        "problem": "Opaque, paper-based allocation process with high corruption risk and no citizen visibility.",
+        "result": "Fully transparent, auditable process",
+        "tech": ["Web Platform", "Business Process Management"]
+      }
+    ]
+  },
+  "WhyUs": {
+    "tag": "Why Quarks Code",
+    "title": "Enterprise Thinking, Startup Speed",
+    "description": "We combine the engineering discipline of large-scale systems with the responsiveness and direct communication of a focused team. You get both.",
+    "points": [
+      {
+        "title": "Enterprise-Grade Engineering",
+        "description": "We apply the same rigor used in large-scale government and finance systems to every project — regardless of size."
+      },
+      {
+        "title": "Direct Communication",
+        "description": "No account managers or middlemen. You work directly with the engineers building your system — faster decisions, better outcomes."
+      },
+      {
+        "title": "Process-First Thinking",
+        "description": "We deeply understand your workflows before writing a single line of code. Better design decisions from day one."
+      },
+      {
+        "title": "Built to Last",
+        "description": "We architect for the long term. Systems that don't just solve today's problem — they scale with your organization."
+      }
+    ]
+  },
+  "CTA": {
+    "title": "Ready to Automate and <accent>Scale Your Operations?</accent>",
+    "description": "Tell us about your challenge. We'll design a solution that fits your organization, timeline, and budget.",
+    "startConversation": "Start a Conversation",
+    "seeWork": "See Our Work"
+  },
+  "ServicesPage": {
+    "metaTitle": "Services",
+    "metaDescription": "Process automation, custom web applications, system integration, and government digital solutions. See how Quarks Code can help your organization.",
+    "tag": "Services",
+    "title": "What We Build and How We Help",
+    "description": "We specialize in one area: replacing manual operations with reliable, scalable digital systems. Here's exactly what we do and what you get.",
+    "whatYouGet": "What You Get",
+    "items": [
+      {
+        "title": "Process Automation",
+        "subtitle": "Eliminate manual work at scale",
+        "description": "Manual processes are a hidden tax on your organization — they slow delivery, introduce errors, and consume your team's most valuable hours. We analyze, map, and replace repetitive workflows with automated systems that operate faster, more accurately, and around the clock.",
+        "outcomes": [
+          "Automated document processing and routing",
+          "Trigger-based workflow execution",
+          "Error reduction and full audit trails",
+          "Integration with existing tools and databases"
+        ]
+      },
+      {
+        "title": "Custom Web Applications",
+        "subtitle": "Enterprise platforms built to last",
+        "description": "Off-the-shelf software is built for the average use case — your organization isn't average. We design and develop web applications precisely fitted to your requirements, built for reliability, security, and the scale of users you need to serve.",
+        "outcomes": [
+          "Citizen-facing and back-office portals",
+          "Multi-role access and permissions management",
+          "Responsive design for all devices",
+          "Scalable, cloud-ready architecture"
+        ]
+      },
+      {
+        "title": "System Integration",
+        "subtitle": "Connect your digital infrastructure",
+        "description": "Most organizations run multiple systems that don't communicate. The result is manual data transfer, duplicate entry, and broken workflows. We build integrations that connect your existing tools — from legacy databases to modern APIs — into a cohesive ecosystem.",
+        "outcomes": [
+          "REST and SOAP API integrations",
+          "Legacy system connectivity",
+          "Real-time data synchronization",
+          "Biometric and hardware device integration"
+        ]
+      },
+      {
+        "title": "Government Digital Solutions",
+        "subtitle": "Purpose-built for the public sector",
+        "description": "Government software demands absolute reliability, security, audit trails, and the ability to serve thousands of citizens simultaneously. Our team has delivered multiple national-level platforms — we know what high-stakes public software requires from day one.",
+        "outcomes": [
+          "Citizen registration and application portals",
+          "Document issuance and verification systems",
+          "Biometric equipment integration",
+          "Secure, role-based access control"
+        ]
+      },
+      {
+        "title": "Internal Enterprise Tools",
+        "subtitle": "Tools that fit how you actually work",
+        "description": "Generic SaaS products force your workflows into shapes they were never designed for. We build internal tools — dashboards, approval systems, case management, reporting — that match exactly how your team operates, not the other way around.",
+        "outcomes": [
+          "Custom dashboards and management panels",
+          "Workflow and multi-stage approval systems",
+          "Case and queue management",
+          "Role-based reporting and exports"
+        ]
+      },
+      {
+        "title": "Data & Reporting",
+        "subtitle": "Visibility into what matters",
+        "description": "Operational data is only valuable if you can read it. We build reporting layers, live dashboards, and analytics systems that give leadership and operational teams real-time visibility into performance, bottlenecks, and trends.",
+        "outcomes": [
+          "Real-time operational dashboards",
+          "Automated report generation and scheduling",
+          "Data export and visualization",
+          "KPI tracking and alerting"
+        ]
+      }
+    ],
+    "processTag": "How We Work",
+    "processTitle": "Our Delivery Process",
+    "processDescription": "Structured delivery from discovery to launch — every step is designed to reduce risk and maximize the value we deliver.",
+    "process": [
+      {
+        "step": "01",
+        "title": "Discovery",
+        "description": "We map your current processes, define requirements, and identify the highest-impact opportunities for improvement."
+      },
+      {
+        "step": "02",
+        "title": "Design",
+        "description": "We design the system architecture and user experience before writing a single line of code."
+      },
+      {
+        "step": "03",
+        "title": "Development",
+        "description": "Iterative development with regular demos. You see progress at every stage and can give feedback early."
+      },
+      {
+        "step": "04",
+        "title": "Launch & Support",
+        "description": "We handle deployment and provide ongoing support to ensure the system performs exactly as designed."
+      }
+    ]
+  },
+  "CaseStudiesPage": {
+    "metaTitle": "Case Studies",
+    "metaDescription": "See how Quarks Code has delivered national-scale government software systems with measurable results — from citizen registration to passport issuance platforms.",
+    "tag": "Case Studies",
+    "title": "Real Systems. Real Results.",
+    "description": "Every project we take on is high-stakes. Here is how we've solved them — and the measurable outcomes we delivered.",
+    "problemLabel": "The Problem",
+    "solutionLabel": "The Solution",
+    "resultsLabel": "Results",
+    "techLabel": "Technologies",
+    "items": [
+      {
+        "tag": "Government · Digital Transformation",
+        "title": "Citizen Registration System",
+        "overview": "A national-level platform built to digitize and centralize the citizen registration process — eliminating paper-based workflows and the inefficiencies that came with them.",
+        "problem": "Registration offices relied entirely on manual, paper-based processes. Documents were processed by hand, data was entered multiple times across different systems, and citizens often had to visit offices repeatedly to complete registration. Staff spent the majority of their time on low-value administrative tasks rather than serving citizens.",
+        "solution": "We developed a centralized web platform that digitizes the entire registration workflow — from document intake to final approval. The platform provides a unified back-office interface for staff, automated document routing between departments, and a structured data model that eliminates redundant entry.",
+        "tech": ["ASP.NET Core", "React", "PostgreSQL"],
+        "results": [
+          { "metric": "70%", "label": "Reduction in processing time" },
+          { "metric": "↓↓", "label": "Data entry errors eliminated" },
+          { "metric": "↑", "label": "Staff throughput and capacity" }
+        ]
+      },
+      {
+        "tag": "Government · Identity Systems",
+        "title": "Passport Application & Issuance System",
+        "overview": "A comprehensive back-office platform managing the full lifecycle of passport applications — including integration with biometric scanning equipment, identity verification, and government databases.",
+        "problem": "The passport issuance process required staff to manually coordinate across multiple disconnected systems and physical equipment. Biometric data capture, identity verification, document production, and record-keeping all happened in isolation — creating bottlenecks, delays, and high risk of errors in official identity documents.",
+        "solution": "We built a centralized back-office platform integrating the full passport issuance workflow. The system connects directly with biometric scanning devices, external government identity databases, and document production equipment — creating a single unified workspace. Every step is tracked, audited, and verifiable.",
+        "tech": ["ASP.NET Core", "React", "PostgreSQL", "Biometric Hardware Integration"],
+        "results": [
+          { "metric": "80%", "label": "Reduction in processing time per application" },
+          { "metric": "Full", "label": "Integration with biometric equipment" },
+          { "metric": "End-to-end", "label": "Audit trail for every document" }
+        ]
+      },
+      {
+        "tag": "Government · Anti-Corruption",
+        "title": "Land Allocation Application System",
+        "overview": "A transparent digital platform managing citizen applications for government land allocation — replacing a process vulnerable to manipulation with an auditable, rules-based system.",
+        "problem": "Land allocation decisions were made through a manual, opaque process with paper queues and in-person evaluations. The lack of transparency and accountability created significant risk of corruption — both actual and perceived. Citizens had no visibility into application status or the criteria by which decisions were made.",
+        "solution": "We designed and built a web platform managing the entire allocation process — from citizen application through review, approval, and assignment. The system enforces business rules consistently, maintains a full audit log of every decision and action, and gives citizens real-time application visibility. Discretionary decisions are constrained and documented.",
+        "tech": ["Web Platform", "Business Process Management", "Audit Logging"],
+        "results": [
+          { "metric": "100%", "label": "Transparent, auditable allocation process" },
+          { "metric": "Eliminated", "label": "Unstructured discretion in approvals" },
+          { "metric": "↑", "label": "Public trust in the allocation process" }
+        ]
+      }
+    ]
+  },
+  "AboutPage": {
+    "metaTitle": "About",
+    "metaDescription": "Meet the Quarks Code team — senior engineers and project managers with deep experience delivering national-scale government systems and enterprise platforms.",
+    "tag": "About Us",
+    "title": "Built by Engineers Who Understand Business",
+    "description": "Quarks Code is a software development company focused on helping organizations automate processes, streamline operations, and build scalable digital products. Our experience spans government, finance, and healthcare — where reliability, security, and efficiency are non-negotiable.",
+    "quote": "We believe software should do more than solve today's problems — it should create a foundation for future growth. Our goal is simple: <accent>transform complex business challenges into efficient digital systems that create measurable value.</accent>",
+    "valuesTag": "What We Stand For",
+    "valuesTitle": "Our Principles",
+    "values": [
+      {
+        "title": "Engineering Excellence",
+        "description": "We hold our work to the same standards as the largest enterprise systems — because the organizations we serve depend on it."
+      },
+      {
+        "title": "Business Understanding",
+        "description": "We don't just implement requirements. We understand the business context behind them — so the software we deliver solves the right problem."
+      },
+      {
+        "title": "Transparent Delivery",
+        "description": "No surprises. You see what we're building at every step. We communicate proactively about progress, blockers, and decisions."
+      },
+      {
+        "title": "Long-term Thinking",
+        "description": "We build for the future, not just the deadline. Our systems are designed to scale, adapt, and remain maintainable for years."
+      }
+    ],
+    "teamTag": "The Team",
+    "teamTitle": "People Who Build Your Software",
+    "teamDescription": "A small, focused team of senior specialists — every person who works on your project is experienced, accountable, and committed to the outcome.",
+    "team": [
+      {
+        "name": "Aidar Abakir",
+        "role": "CEO & Technical Lead",
+        "bio": "Software Engineer with 8+ years of experience across government, finance, and healthcare systems. Aidar builds scalable software that serves thousands of users and automates complex business processes. His focus is turning complex workflows into simple, reliable systems that improve efficiency and support organizational growth.",
+        "specialties": ["System Architecture", "Government Systems", "Process Automation", "Technical Leadership"]
+      },
+      {
+        "name": "Elmira Botobekova",
+        "role": "Project Manager",
+        "bio": "Project Manager with extensive experience leading large-scale government digital transformation projects across Kyrgyzstan. Elmira specializes in Scrum practices and coordinating cross-functional teams to deliver complex systems on time and at scale. She has led initiatives including national address registration platforms, statistical systems, and large-scale document production systems.",
+        "specialties": ["Project Management", "Scrum & Agile", "Government Projects", "Cross-functional Teams"]
+      },
+      {
+        "name": "Arzybek Bekmuratov",
+        "role": "Frontend Developer",
+        "bio": "Frontend Developer with 6 years of experience building complex web applications across logistics systems for US truck operations, financial automation platforms in Australia, and government digital systems. His focus is scalable, performant frontend architectures that handle real-world operational complexity while keeping user experience clean and efficient.",
+        "specialties": ["React", "Frontend Architecture", "Performance", "Complex UI Systems"]
+      }
+    ]
+  },
+  "ContactPage": {
+    "metaTitle": "Contact",
+    "metaDescription": "Start a conversation with Quarks Code. Tell us about your project and we'll design a solution that fits your organization.",
+    "tag": "Contact",
+    "title": "Let's Talk About Your Project",
+    "description": "Tell us about the challenge you're trying to solve. We'll review your message and follow up within one business day.",
+    "responseLabel": "Typical response time:",
+    "responseBody": "We reply to all project inquiries within one business day. For urgent matters, please call directly.",
+    "info": [
+      {
+        "label": "Phone",
+        "lines": ["+996 770 000 833", "+996 559 033 375"]
+      },
+      {
+        "label": "Email",
+        "lines": ["info@quarks.com"]
+      },
+      {
+        "label": "Address",
+        "lines": ["Asanbai 40", "Bishkek, Kyrgyzstan"]
+      },
+      {
+        "label": "Working Hours",
+        "lines": ["Mon – Fri: 9:00 – 18:00", "Weekend: by appointment"]
+      }
+    ]
+  },
+  "ContactForm": {
+    "fullName": "Full Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "you@company.com",
+    "company": "Company / Organization",
+    "companyPlaceholder": "Your organization",
+    "helpWith": "What can we help with?",
+    "selectTopic": "Select a topic",
+    "topicAutomation": "Process Automation",
+    "topicWebapp": "Custom Web Application",
+    "topicIntegration": "System Integration",
+    "topicGovernment": "Government Digital Solutions",
+    "topicOther": "Other / Not Sure",
+    "projectLabel": "Tell us about your project",
+    "projectPlaceholder": "Describe the problem you're trying to solve, your current workflow, and any timeline or scale requirements...",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "footnote": "We respond to all inquiries within one business day.",
+    "sentTitle": "Message Sent",
+    "sentBody": "Thank you for reaching out. We'll review your message and get back to you within one business day."
+  }
+}

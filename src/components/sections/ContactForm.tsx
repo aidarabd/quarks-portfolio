@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Send } from "lucide-react";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
 export default function ContactForm() {
+  const t = useTranslations("ContactForm");
   const [status, setStatus] = useState<Status>("idle");
   const [form, setForm] = useState({
     name: "",
@@ -37,11 +39,8 @@ export default function ContactForm() {
         <div className="w-16 h-16 bg-green-500/15 border border-green-500/30 rounded-2xl flex items-center justify-center mb-5">
           <span className="text-green-400 text-2xl font-bold">✓</span>
         </div>
-        <h3 className="text-white font-bold text-xl mb-3">Message Sent</h3>
-        <p className="text-slate-400 leading-relaxed max-w-sm">
-          Thank you for reaching out. We&apos;ll review your message and get
-          back to you within one business day.
-        </p>
+        <h3 className="text-white font-bold text-xl mb-3">{t("sentTitle")}</h3>
+        <p className="text-slate-400 leading-relaxed max-w-sm">{t("sentBody")}</p>
       </div>
     );
   }
@@ -57,7 +56,7 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label className="block text-slate-300 text-sm font-medium mb-2">
-            Full Name <span className="text-blue-400">*</span>
+            {t("fullName")} <span className="text-blue-400">*</span>
           </label>
           <input
             type="text"
@@ -65,13 +64,13 @@ export default function ContactForm() {
             required
             value={form.name}
             onChange={handleChange}
-            placeholder="Your name"
+            placeholder={t("namePlaceholder")}
             className={inputClass}
           />
         </div>
         <div>
           <label className="block text-slate-300 text-sm font-medium mb-2">
-            Email <span className="text-blue-400">*</span>
+            {t("email")} <span className="text-blue-400">*</span>
           </label>
           <input
             type="email"
@@ -79,7 +78,7 @@ export default function ContactForm() {
             required
             value={form.email}
             onChange={handleChange}
-            placeholder="you@company.com"
+            placeholder={t("emailPlaceholder")}
             className={inputClass}
           />
         </div>
@@ -87,21 +86,21 @@ export default function ContactForm() {
 
       <div>
         <label className="block text-slate-300 text-sm font-medium mb-2">
-          Company / Organization
+          {t("company")}
         </label>
         <input
           type="text"
           name="company"
           value={form.company}
           onChange={handleChange}
-          placeholder="Your organization"
+          placeholder={t("companyPlaceholder")}
           className={inputClass}
         />
       </div>
 
       <div>
         <label className="block text-slate-300 text-sm font-medium mb-2">
-          What can we help with? <span className="text-blue-400">*</span>
+          {t("helpWith")} <span className="text-blue-400">*</span>
         </label>
         <select
           name="subject"
@@ -111,19 +110,19 @@ export default function ContactForm() {
           className={inputClass}
         >
           <option value="" disabled>
-            Select a topic
+            {t("selectTopic")}
           </option>
-          <option value="automation">Process Automation</option>
-          <option value="webapp">Custom Web Application</option>
-          <option value="integration">System Integration</option>
-          <option value="government">Government Digital Solutions</option>
-          <option value="other">Other / Not Sure</option>
+          <option value="automation">{t("topicAutomation")}</option>
+          <option value="webapp">{t("topicWebapp")}</option>
+          <option value="integration">{t("topicIntegration")}</option>
+          <option value="government">{t("topicGovernment")}</option>
+          <option value="other">{t("topicOther")}</option>
         </select>
       </div>
 
       <div>
         <label className="block text-slate-300 text-sm font-medium mb-2">
-          Tell us about your project <span className="text-blue-400">*</span>
+          {t("projectLabel")} <span className="text-blue-400">*</span>
         </label>
         <textarea
           name="message"
@@ -131,7 +130,7 @@ export default function ContactForm() {
           rows={5}
           value={form.message}
           onChange={handleChange}
-          placeholder="Describe the problem you're trying to solve, your current workflow, and any timeline or scale requirements..."
+          placeholder={t("projectPlaceholder")}
           className={`${inputClass} resize-none`}
         />
       </div>
@@ -144,19 +143,17 @@ export default function ContactForm() {
         {status === "sending" ? (
           <>
             <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-            Sending...
+            {t("sending")}
           </>
         ) : (
           <>
-            Send Message
+            {t("send")}
             <Send size={15} />
           </>
         )}
       </button>
 
-      <p className="text-slate-600 text-xs text-center">
-        We respond to all inquiries within one business day.
-      </p>
+      <p className="text-slate-600 text-xs text-center">{t("footnote")}</p>
     </form>
   );
 }

@@ -1,22 +1,25 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { Menu, X } from "lucide-react";
-
-const links = [
-  { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
-  { href: "/case-studies", label: "Case Studies" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
-];
+import { Link, usePathname } from "@/i18n/navigation";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
+  const t = useTranslations("Nav");
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+
+  const links = [
+    { href: "/", label: t("home") },
+    { href: "/services", label: t("services") },
+    { href: "/case-studies", label: t("caseStudies") },
+    { href: "/about", label: t("about") },
+    { href: "/contact", label: t("contact") },
+  ] as const;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -35,9 +38,13 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center group-hover:bg-blue-400 transition-colors">
-            <span className="text-white font-bold text-sm">Q</span>
-          </div>
+          <Image
+            src="/quarks-logo.jpg"
+            alt="Quarks Code"
+            width={32}
+            height={32}
+            className="w-8 h-8 rounded-lg object-cover"
+          />
           <span className="font-semibold text-white text-lg tracking-tight">
             Quarks<span className="text-blue-500">Code</span>
           </span>
@@ -61,24 +68,28 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* CTA */}
-        <div className="hidden md:block">
+        {/* CTA + language */}
+        <div className="hidden md:flex items-center gap-4">
+          <LanguageSwitcher />
           <Link
             href="/contact"
             className="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-lg text-sm font-semibold transition-colors shadow-lg shadow-blue-500/20"
           >
-            Start a Project
+            {t("startProject")}
           </Link>
         </div>
 
         {/* Mobile toggle */}
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-slate-300 hover:text-white p-1"
-          aria-label="Toggle menu"
-        >
-          {menuOpen ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        <div className="md:hidden flex items-center gap-3">
+          <LanguageSwitcher />
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="text-slate-300 hover:text-white p-1"
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
@@ -106,7 +117,7 @@ export default function Navbar() {
                 onClick={() => setMenuOpen(false)}
                 className="block bg-blue-500 hover:bg-blue-600 text-white px-4 py-3 rounded-lg text-sm font-semibold text-center transition-colors"
               >
-                Start a Project
+                {t("startProject")}
               </Link>
             </li>
           </ul>

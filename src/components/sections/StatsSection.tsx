@@ -1,11 +1,11 @@
-const stats = [
-  { value: "70%+", label: "Average reduction in manual processing time" },
-  { value: "8+", label: "Years of enterprise software experience" },
-  { value: "3", label: "National-scale government systems delivered" },
-  { value: "1000s", label: "Citizens served daily by our platforms" },
-];
+import { useTranslations } from "next-intl";
+
+type Stat = { value: string; label: string };
 
 export default function StatsSection() {
+  const t = useTranslations("Stats");
+  const stats = t.raw("items") as Stat[];
+
   return (
     <section className="border-y border-[#1e2d47] bg-[#080d1a]">
       <div className="max-w-7xl mx-auto px-6 py-16">

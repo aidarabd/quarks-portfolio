@@ -1,46 +1,40 @@
 import { Metadata } from "next";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ContactForm from "@/components/sections/ContactForm";
 import type { LucideIcon } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description:
-    "Start a conversation with Quarks Code. Tell us about your project and we'll design a solution that fits your organization.",
-};
-
-const contactInfo: {
-  icon: LucideIcon;
-  label: string;
-  lines: string[];
-  href?: string;
-}[] = [
-  {
-    icon: Phone,
-    label: "Phone",
-    lines: ["+996 770 000 833", "+996 559 033 375"],
-    href: "tel:+996770000833",
-  },
-  {
-    icon: Mail,
-    label: "Email",
-    lines: ["info@quarks.com"],
-    href: "mailto:info@quarks.com",
-  },
-  {
-    icon: MapPin,
-    label: "Address",
-    lines: ["Асанбай 40", "Bishkek, Kyrgyzstan"],
-  },
-  {
-    icon: Clock,
-    label: "Working Hours",
-    lines: ["Mon – Fri: 9:00 – 18:00", "Weekend: by appointment"],
-  },
+const icons: LucideIcon[] = [Phone, Mail, MapPin, Clock];
+const hrefs: (string | undefined)[] = [
+  "tel:+996770000833",
+  "mailto:info@quarks.com",
+  undefined,
+  undefined,
 ];
 
-export default function ContactPage() {
+type ContactInfo = { label: string; lines: string[] };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "ContactPage" });
+  return { title: t("metaTitle"), description: t("metaDescription") };
+}
+
+export default async function ContactPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("ContactPage");
+  const contactInfo = t.raw("info") as ContactInfo[];
+
   return (
     <>
       {/* Hero */}
@@ -49,9 +43,9 @@ export default function ContactPage() {
         <div className="absolute top-1/2 left-1/3 w-[400px] h-[300px] bg-blue-600/8 rounded-full blur-[100px]" />
         <div className="relative max-w-7xl mx-auto px-6">
           <SectionHeader
-            tag="Contact"
-            title="Let's Talk About Your Project"
-            description="Tell us about the challenge you're trying to solve. We'll review your message and follow up within one business day."
+            tag={t("tag")}
+            title={t("title")}
+            description={t("description")}
           />
         </div>
       </section>
@@ -67,8 +61,9 @@ export default function ContactPage() {
 
             {/* Info */}
             <div className="lg:col-span-2 space-y-5">
-              {contactInfo.map((info) => {
-                const Icon = info.icon;
+              {contactInfo.map((info, i) => {
+                const Icon = icons[i];
+                const href = hrefs[i];
                 return (
                   <div
                     key={info.label}
@@ -82,11 +77,11 @@ export default function ContactPage() {
                         <p className="text-slate-500 text-xs uppercase tracking-wider mb-2">
                           {info.label}
                         </p>
-                        {info.lines.map((line, i) =>
-                          info.href && i === 0 ? (
+                        {info.lines.map((line, j) =>
+                          href && j === 0 ? (
                             <a
                               key={line}
-                              href={info.href}
+                              href={href}
                               className="block text-white hover:text-blue-400 transition-colors text-sm"
                             >
                               {line}
@@ -105,8 +100,8 @@ export default function ContactPage() {
 
               <div className="bg-blue-500/10 border border-blue-500/30 rounded-2xl p-6">
                 <p className="text-blue-200 text-sm leading-relaxed">
-                  <strong className="text-blue-300">Typical response time:</strong>{" "}
-                  We reply to all project inquiries within one business day. For urgent matters, please call directly.
+                  <strong className="text-blue-300">{t("responseLabel")}</strong>{" "}
+                  {t("responseBody")}
                 </p>
               </div>
             </div>
