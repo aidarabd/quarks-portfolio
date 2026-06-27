@@ -12,6 +12,7 @@ export default function ContactForm() {
   const [form, setForm] = useState({
     name: "",
     email: "",
+    phone: "",
     company: "",
     subject: "",
     message: "",
@@ -28,9 +29,17 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    // TODO: replace with your email service (Resend, Formspree, etc.)
-    await new Promise((r) => setTimeout(r, 1500));
-    setStatus("sent");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("Request failed");
+      setStatus("sent");
+    } catch {
+      setStatus("error");
+    }
   };
 
   if (status === "sent") {
@@ -84,18 +93,33 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <div>
-        <label className="block text-slate-300 text-sm font-medium mb-2">
-          {t("company")}
-        </label>
-        <input
-          type="text"
-          name="company"
-          value={form.company}
-          onChange={handleChange}
-          placeholder={t("companyPlaceholder")}
-          className={inputClass}
-        />
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div>
+          <label className="block text-slate-300 text-sm font-medium mb-2">
+            {t("phone")}
+          </label>
+          <input
+            type="tel"
+            name="phone"
+            value={form.phone}
+            onChange={handleChange}
+            placeholder={t("phonePlaceholder")}
+            className={inputClass}
+          />
+        </div>
+        <div>
+          <label className="block text-slate-300 text-sm font-medium mb-2">
+            {t("company")}
+          </label>
+          <input
+            type="text"
+            name="company"
+            value={form.company}
+            onChange={handleChange}
+            placeholder={t("companyPlaceholder")}
+            className={inputClass}
+          />
+        </div>
       </div>
 
       <div>
@@ -134,6 +158,12 @@ export default function ContactForm() {
           className={`${inputClass} resize-none`}
         />
       </div>
+
+      {status === "error" && (
+        <p className="text-red-400 text-sm text-center bg-red-500/10 border border-red-500/30 rounded-xl py-3 px-4">
+          {t("errorBody")}
+        </p>
+      )}
 
       <button
         type="submit"

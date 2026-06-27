@@ -375,6 +375,8 @@
     "namePlaceholder": "Your name",
     "email": "Email",
     "emailPlaceholder": "you@company.com",
+    "phone": "Phone Number",
+    "phonePlaceholder": "+996 700 123 456",
     "company": "Company / Organization",
     "companyPlaceholder": "Your organization",
     "helpWith": "What can we help with?",
@@ -390,6 +392,7 @@
     "sending": "Sending...",
     "footnote": "We respond to all inquiries within one business day.",
     "sentTitle": "Message Sent",
-    "sentBody": "Thank you for reaching out. We'll review your message and get back to you within one business day."
+    "sentBody": "Thank you for reaching out. We'll review your message and get back to you within one business day.",
+    "errorBody": "Something went wrong while sending your message. Please try again or email us directly."
   }
 }
